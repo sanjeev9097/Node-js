@@ -1,0 +1,6 @@
+const http = require('http');
+
+http.createServer((req, res) =>{
+    res.write('Hii My name is Sanjeev kumar');
+    res.end();
+}).listen(4000);
