@@ -1,4 +1,4 @@
-// Print the hello world on to the screen without using browser  cmd is node projectName 
+
 
 console.log('Hello World')
 
