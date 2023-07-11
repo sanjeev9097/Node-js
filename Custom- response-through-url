@@ -1,0 +1,27 @@
+const http = require('http');
+
+const server1 = http.createServer((req, res) =>{
+    console.log(req.url, req.method, req.headers);
+    //process.exit();
+
+    res.setHeader('Content-type', 'text\html');
+    res.write('<html><head><title>My first node</title></head> <body> <h1> Welcome to my Node Js project.</h1></body></html>');
+
+    const url = req.url;
+    if(url === '/home'){
+        res.write("Welcome to Home");
+    }
+
+    if(url === '/about'){
+        res.write('Welcome to About Us page');
+    }
+
+    if(url === '/node'){
+        res.write('Welcome to my Node Js project');
+    }
+
+
+    res.end();
+});
+
+server1.listen(4000);
